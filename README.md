@@ -1,10 +1,10 @@
-#List EC2 instances in all regions
+<h1>List EC2 instances in all regions</h1>
 
 With this simple script you can list EC2 instances in all AWS Regions.
 
 The scrip also supports aws cli profiles.
 
-###Usage:
+<h3>Usage:</h3>
 
 You need to have installed and configured [aws cli](https://aws.amazon.com/cli/)
 
