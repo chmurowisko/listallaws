@@ -1,11 +1,11 @@
 # To use this tool you need to installed and configured AWS CLI!!!
 
-if [ -z "$1"];
+if [ -z "$1" ];
 then
   echo "No aws cli profile name provided. You can add the name after space: listallelb profilename\n"
-  ACC=${VARIABLE:-default}
+  ACC = ${VARIABLE:-default}
 else
-  ACC=$1
+  ACC = $1
 fi
 echo "Listing all ELBs for: "$ACC" profile\n"
 
