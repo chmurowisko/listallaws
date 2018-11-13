@@ -9,7 +9,7 @@ else
 fi
 echo "Listing all RDS instances for: "$ACC" profile\n"
 
-for region in `aws ec2 describe-regions --output text | cut -f3`
+for region in `aws ec2 describe-regions --output text --profile $ACC | cut -f3`
 do
     echo "\nList of RDS instances in region:'$region':"
     aws rds describe-db-instances --query "DBInstances[*].{NAME:DBInstanceIdentifier,SIZE:DBInstanceClass,Type:Engine,PUBLIC:PubliclyAccessible}" --output=table --region $region --profile $ACC

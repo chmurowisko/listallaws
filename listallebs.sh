@@ -7,9 +7,9 @@ then
 else
   ACC=$1
 fi
-echo "Listing all EBS disks for: "$ACC" profile\n"
+echo "Listing all EBS for: "$ACC" profile\n"
 
-for region in `aws ec2 describe-regions --output text | cut -f3`
+for region in `aws ec2 describe-regions --output text --profile $ACC | cut -f3`
 do
     echo "\nList of EBS disks in region:'$region':"
     aws ec2 describe-volumes --query "Volumes[*].{AZ:AvailabilityZone,ID:VolumeId,Type:VolumeType,State:State,Name:Tags[0].Value}" --output=table --region $region --profile $ACC

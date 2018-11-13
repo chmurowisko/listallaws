@@ -9,7 +9,7 @@ else
 fi
 echo "Listing all ELBs for: "$ACC" profile\n"
 
-for region in `aws ec2 describe-regions --output text | cut -f3`
+for region in `aws ec2 describe-regions --output text --profile $ACC | cut -f3`
 do
     echo "\nList of ELBs in region:'$region':"
     aws elb describe-load-balancers --query "LoadBalancerDescriptions[*].{Name:LoadBalancerName,Exposure:Scheme,DNS:DNSName}" --output=table --region $region --profile $ACC

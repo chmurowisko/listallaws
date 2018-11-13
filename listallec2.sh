@@ -7,9 +7,9 @@ then
 else
   ACC=$1
 fi
-echo "Listing all ec2 instances for: "$ACC" profile\n"
+echo "Listing all EC2 instances for: "$ACC" profile\n"
 
-for region in `aws ec2 describe-regions --output text | cut -f3`
+for region in `aws ec2 describe-regions --output text --profile $ACC | cut -f3`
 do
     echo "\nList of EC2 instances in region:'$region':"
     aws ec2 describe-instances --query "Reservations[*].Instances[*].{IP:PublicIpAddress,ID:InstanceId,Type:InstanceType,State:State.Name,Name:Tags[0].Value}" --output=table --region $region --profile $ACC
