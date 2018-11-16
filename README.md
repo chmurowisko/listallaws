@@ -15,7 +15,7 @@ Example:
 
 **UPDATE**
 
-For better review, a "listaallsg" script exports all configured Security Groups to CSV file.
+For better review, a "listallsg" script exports all configured Security Groups to CSV file.
 
 
 Author: Lukasz Dorosz [@mrdoro](https://twitter.com/mrdoro)
