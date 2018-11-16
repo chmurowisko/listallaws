@@ -2,7 +2,7 @@
 
 With this simple scripts you can list many different services provisioned in all AWS Regions.
 
-The scrips support aws cli profiles. Just add the name of the cli profile after a scrip name.
+The scrips support aws cli profiles. Just add the name of the cli profile after a script name.
 
 <h3>Usage:</h3>
 
@@ -14,6 +14,7 @@ Example:
 
 
 **UPDATE**
+
 For better review, a "listaallsg" script exports all configured Security Groups to CSV file.
 
 
