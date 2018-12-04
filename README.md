@@ -12,6 +12,7 @@ Example:
 1. Type: **./listallec2.sh** to run the script with default aws cli profile.
 2. Type: **./listallec2.sh profile_name** to run the script for particular aws cli profile configured in aws cli credentials.
 
+[![asciicast](https://asciinema.org/a/215142.svg)](https://asciinema.org/a/215142)
 
 **UPDATE**
 
